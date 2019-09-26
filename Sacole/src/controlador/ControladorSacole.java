@@ -49,7 +49,7 @@ man.dispose();//fechar a tela da manutenção
         objeto.setCodigo(Integer.parseInt(man.jtfCodigo.getText()));
         objeto.setNrserie(Integer.parseInt(man.jtfNrserie.getText()));
         objeto.setPreco(Double.parseDouble(man.jtfPreco.getText()));
-        objeto.setDtvalidade(man.jtfDtvalidade.getText());
+        objeto.setDtvalidade(LocalDate.parse(man.jtfDtvalidade.getText(), DateTimeFormatter.ofPattern("dd/MM/yyyy")));
         objeto.setSabor(man.jtfSabor.getText());
         
         boolean resultado = DaoSacole.alterar(objeto);
