@@ -37,7 +37,7 @@ public class DaoSacole {
     public static void main(String[] args) {
         Sacole objeto = new Sacole();
         objeto.setNrserie(1);
-        objeto.setPreco(2);
+        objeto.setPreco(10.0);
         objeto.setDtvalidade(LocalDate.parse("11/01/1988", DateTimeFormatter.ofPattern("dd/MM/yyyy")));
         objeto.setSabor("Abacaxi");
         
@@ -90,7 +90,7 @@ public class DaoSacole {
                 objeto.setCodigo(rs.getInt("codigo"));
                 objeto.setNrserie(rs.getInt("nrserie"));
                 objeto.setPreco(rs.getDouble("preco"));
-                objeto.setDtvalidade(rs.getString("dtvalidade"));
+                objeto.setDtvalidade(rs.getDate("dtvalidade").toLocalDate());
                 objeto.setSabor(rs.getString("sabor"));
                 
                 resultados.add(objeto);//não mexa nesse, ele adiciona o objeto na lista
@@ -115,7 +115,7 @@ public class DaoSacole {
                 objeto.setCodigo(rs.getInt("codigo"));
                 objeto.setNrserie(rs.getInt("nrserie"));
                 objeto.setPreco(rs.getDouble("preco"));
-                objeto.setDtvalidade(rs.getString("dtvalidade"));
+                objeto.setDtvalidade(rs.getDate("dtvalidade").toLocalDate());
                 objeto.setSabor(rs.getString("sabor"));
                 return objeto;//não mexa nesse, ele adiciona o objeto na lista
             }

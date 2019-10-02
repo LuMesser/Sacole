@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class Sacole {
     private Integer codigo;
     private Integer nrserie;
-    private double preco;
+    private Double preco;
     private LocalDate dtvalidade;
     private String sabor;
 
@@ -33,11 +33,11 @@ public class Sacole {
         this.nrserie = nrserie;
     }
 
-    public double getPreco() {
+    public Double getPreco() {
         return preco;
     }
 
-    public void setPreco(double preco) {
+    public void setPreco(Double preco) {
         this.preco = preco;
     }
 
@@ -56,6 +56,8 @@ public class Sacole {
     public void setSabor(String sabor) {
         this.sabor = sabor;
     }
+
+    
 
     
 

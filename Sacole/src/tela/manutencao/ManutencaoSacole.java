@@ -67,31 +67,32 @@ public ListagemSacole listagem;
         setBackground(new java.awt.Color(255, 153, 153));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 0, 153));
+        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setText("Manutenção Sacolé");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 0, 153));
+        jLabel2.setForeground(new java.awt.Color(102, 153, 255));
         jLabel2.setText("Código");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(51, 0, 153));
+        jLabel3.setForeground(new java.awt.Color(255, 102, 102));
         jLabel3.setText("Número de série");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(51, 0, 153));
+        jLabel4.setForeground(new java.awt.Color(204, 204, 0));
         jLabel4.setText("Preço");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(51, 0, 153));
+        jLabel5.setForeground(new java.awt.Color(0, 153, 0));
         jLabel5.setText("Data de validade");
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(51, 0, 153));
+        jLabel6.setForeground(new java.awt.Color(0, 204, 204));
         jLabel6.setText("Sabor");
 
+        btnAdicionar.setBackground(new java.awt.Color(0, 102, 102));
         btnAdicionar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnAdicionar.setForeground(new java.awt.Color(51, 0, 153));
+        btnAdicionar.setForeground(new java.awt.Color(204, 204, 255));
         btnAdicionar.setText("Adicionar");
         btnAdicionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,8 +100,9 @@ public ListagemSacole listagem;
             }
         });
 
+        btnAlterar.setBackground(new java.awt.Color(0, 102, 102));
         btnAlterar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnAlterar.setForeground(new java.awt.Color(51, 0, 153));
+        btnAlterar.setForeground(new java.awt.Color(204, 204, 255));
         btnAlterar.setText("Alterar");
         btnAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,8 +110,9 @@ public ListagemSacole listagem;
             }
         });
 
+        btnExcluir.setBackground(new java.awt.Color(0, 102, 102));
         btnExcluir.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnExcluir.setForeground(new java.awt.Color(51, 0, 153));
+        btnExcluir.setForeground(new java.awt.Color(204, 204, 255));
         btnExcluir.setText("Excluir");
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,11 +120,20 @@ public ListagemSacole listagem;
             }
         });
 
+        btnCancelar.setBackground(new java.awt.Color(0, 102, 102));
         btnCancelar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnCancelar.setForeground(new java.awt.Color(51, 0, 153));
+        btnCancelar.setForeground(new java.awt.Color(204, 204, 255));
         btnCancelar.setText("Cancelar");
 
-        jtfCodigo.setForeground(new java.awt.Color(255, 255, 255));
+        jtfCodigo.setBackground(new java.awt.Color(204, 204, 255));
+
+        jtfNrserie.setBackground(new java.awt.Color(255, 102, 102));
+
+        jtfPreco.setBackground(new java.awt.Color(204, 204, 255));
+
+        jtfDtvalidade.setBackground(new java.awt.Color(255, 102, 102));
+
+        jtfSabor.setBackground(new java.awt.Color(204, 204, 255));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -147,17 +159,15 @@ public ListagemSacole listagem;
                                 .addComponent(jLabel4))
                             .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING))
                         .addGap(31, 31, 31)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jtfSabor)
-                            .addComponent(jtfDtvalidade)
-                            .addComponent(jtfPreco)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jtfCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
-                                .addGap(2, 2, 2))
-                            .addComponent(jtfNrserie, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jtfDtvalidade, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtfPreco, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtfCodigo, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtfNrserie, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                            .addComponent(jtfSabor))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(94, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(82, 82, 82))
         );
@@ -192,7 +202,7 @@ public ListagemSacole listagem;
                     .addComponent(btnAlterar)
                     .addComponent(btnExcluir)
                     .addComponent(btnCancelar))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();

@@ -96,7 +96,7 @@ man.dispose();//fechar a tela da manutenção
             linha.add(objeto.getCodigo());
             linha.add(objeto.getNrserie());
             linha.add(objeto.getPreco());
-            linha.add(objeto.getDtvalidade());
+            linha.add(objeto.getDtvalidade().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
             linha.add(objeto.getSabor());
             modelo.addRow(linha); //adicionando a linha na tabela
         }
@@ -107,8 +107,8 @@ man.dispose();//fechar a tela da manutenção
         //Definindo os valores do campo na tela (um para cada atributo/campo)
         man.jtfCodigo.setText(objeto.getCodigo().toString());
         man.jtfNrserie.setText(objeto.getNrserie().toString());
-        objeto.setPreco(Double.parseDouble(man.jtfPreco.getText()));
-        man.jtfDtvalidade.setText(objeto.getDtvalidade());
+        man.jtfPreco.setText(objeto.getPreco().toString());
+        man.jtfDtvalidade.setText(objeto.getDtvalidade().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
         man.jtfSabor.setText(objeto.getSabor());
         
         man.jtfCodigo.setEnabled(false); //desabilitando o campo código
