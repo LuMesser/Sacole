@@ -127,11 +127,11 @@ public ListagemSacole listagem;
 
         jtfCodigo.setBackground(new java.awt.Color(204, 204, 255));
 
-        jtfNrserie.setBackground(new java.awt.Color(255, 102, 102));
+        jtfNrserie.setBackground(new java.awt.Color(204, 204, 255));
 
         jtfPreco.setBackground(new java.awt.Color(204, 204, 255));
 
-        jtfDtvalidade.setBackground(new java.awt.Color(255, 102, 102));
+        jtfDtvalidade.setBackground(new java.awt.Color(204, 204, 255));
 
         jtfSabor.setBackground(new java.awt.Color(204, 204, 255));
 
